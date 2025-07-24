@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Marine Corps Study App</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="app-container">
+			<header class="app-header">
+				<div class="header-content">
+					<div class="marine-emblem">🦅</div>
+					<div class="header-text">
+						<h1>Marine Corps Study App</h1>
+						<p class="motto">Semper Fidelis</p>
+					</div>
+					<div class="header-stats">
+						<div class="stat-item">
+							<span class="stat-label">Overall Progress</span>
+							<span class="stat-value" id="overall-progress">0%</span>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<nav class="main-navigation">
+				<button class="nav-button active" data-section="dashboard">
+					<span class="nav-icon">📊</span>
+					Dashboard
+				</button>
+				<button class="nav-button" data-section="flashcards">
+					<span class="nav-icon">🃏</span>
+					Flashcards
+				</button>
+				<button class="nav-button" data-section="multiple-choice">
+					<span class="nav-icon">✅</span>
+					Multiple Choice
+				</button>
+				<button class="nav-button" data-section="true-false">
+					<span class="nav-icon">❓</span>
+					True/False
+				</button>
+				<button class="nav-button" data-section="ranks">
+					<span class="nav-icon">🎖️</span>
+					Ranks
+				</button>
+				<button class="nav-button" data-section="reference">
+					<span class="nav-icon">📖</span>
+					Reference
+				</button>
+			</nav>
+
+			<main class="main-content">
+				<!-- Dashboard Section -->
+				<section id="dashboard" class="content-section active">
+					<div class="section-header">
+						<div>
+							<h2>Study Dashboard</h2>
+							<p>Track your progress across all study sections</p>
+						</div>
+					</div>
+
+					<div class="dashboard-grid">
+						<div class="progress-card">
+							<div class="card-header">
+								<h3>Flashcards</h3>
+								<span class="card-icon">🃏</span>
+							</div>
+							<div class="progress-stats">
+								<div class="stat-row">
+									<span>Correct:</span>
+									<span id="dashboard-fc-correct">0</span>
+								</div>
+								<div class="stat-row">
+									<span>Total:</span>
+									<span id="dashboard-fc-total">0</span>
+								</div>
+							</div>
+							<div class="progress-bar">
+								<div class="progress-fill" id="dashboard-fc-progress"></div>
+							</div>
+							<div class="accuracy-display">
+								<span id="dashboard-fc-accuracy">0%</span>
+								<small>Accuracy</small>
+							</div>
+						</div>
+
+						<div class="progress-card">
+							<div class="card-header">
+								<h3>Multiple Choice</h3>
+								<span class="card-icon">✅</span>
+							</div>
+							<div class="progress-stats">
+								<div class="stat-row">
+									<span>Correct:</span>
+									<span id="dashboard-mc-correct">0</span>
+								</div>
+								<div class="stat-row">
+									<span>Total:</span>
+									<span id="dashboard-mc-total">0</span>
+								</div>
+							</div>
+							<div class="progress-bar">
+								<div class="progress-fill" id="dashboard-mc-progress"></div>
+							</div>
+							<div class="accuracy-display">
+								<span id="dashboard-mc-accuracy">0%</span>
+								<small>Accuracy</small>
+							</div>
+						</div>
+
+						<div class="progress-card">
+							<div class="card-header">
+								<h3>True/False</h3>
+								<span class="card-icon">❓</span>
+							</div>
+							<div class="progress-stats">
+								<div class="stat-row">
+									<span>Correct:</span>
+									<span id="dashboard-tf-correct">0</span>
+								</div>
+								<div class="stat-row">
+									<span>Total:</span>
+									<span id="dashboard-tf-total">0</span>
+								</div>
+							</div>
+							<div class="progress-bar">
+								<div class="progress-fill" id="dashboard-tf-progress"></div>
+							</div>
+							<div class="accuracy-display">
+								<span id="dashboard-tf-accuracy">0%</span>
+								<small>Accuracy</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="motivational-section">
+						<div class="quote-card">
+							<blockquote>
+								"The Marines I have seen around the world have the cleanest
+								bodies, the filthiest minds, the highest morale, and the lowest
+								morals of any group of animals I have ever seen. Thank God for
+								the United States Marine Corps!"
+							</blockquote>
+							<cite>— Eleanor Roosevelt</cite>
+						</div>
+						<div class="marine-facts">
+							<h3>Marine Corps Facts</h3>
+							<ul>
+								<li>Founded November 10, 1775</li>
+								<li>Motto: Semper Fidelis (Always Faithful)</li>
+								<li>Colors: Scarlet and Gold</li>
+								<li>Hymn: "From the Halls of Montezuma"</li>
+								<li>Mascot: English Bulldog</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<!-- Flashcards Section -->
+				<section id="flashcards" class="content-section">
+					<div class="section-header">
+						<div>
+							<h2>Flashcards</h2>
+							<p>Study Marine Corps knowledge with interactive flashcards</p>
+						</div>
+						<div class="section-controls">
+							<button class="control-btn edit-btn" id="edit-flashcards-btn">
+								<span>✏️</span> Edit
+							</button>
+							<button class="control-btn reset-btn" id="reset-flashcards-btn">
+								<span>🔄</span> Reset Progress
+							</button>
+						</div>
+					</div>
+
+					<div id="flashcards-study-mode" class="study-mode">
+						<div class="study-header">
+							<div class="progress-indicator">
+								<span id="fc-current">1</span> / <span id="fc-total">0</span>
+							</div>
+							<div class="study-progress-bar">
+								<div class="progress-fill" id="fc-progress"></div>
+							</div>
+						</div>
+
+						<div class="flashcard-container">
+							<div class="flashcard" id="flashcard">
+								<div class="flashcard-inner">
+									<div class="flashcard-front">
+										<div class="card-content">
+											<h3>Question</h3>
+											<p id="flashcard-question">
+												Click "Start Studying" to begin
+											</p>
+										</div>
+									</div>
+									<div class="flashcard-back">
+										<div class="card-content">
+											<h3>Answer</h3>
+											<p id="flashcard-answer"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="study-controls">
+							<button class="primary-btn" id="start-flashcards">
+								Start Studying
+							</button>
+							<button
+								class="secondary-btn"
+								id="flip-flashcard"
+								style="display: none"
+							>
+								Flip Card
+							</button>
+
+							<div
+								class="answer-controls"
+								id="flashcard-answer-controls"
+								style="display: none"
+							>
+								<button class="correct-btn" id="fc-got-right">
+									Got it Right ✅
+								</button>
+								<button class="wrong-btn" id="fc-got-wrong">
+									Got it Wrong ❌
+								</button>
+							</div>
+
+							<button
+								class="primary-btn"
+								id="next-flashcard"
+								style="display: none"
+							>
+								Next Card
+							</button>
+						</div>
+					</div>
+
+					<div
+						id="flashcards-edit-mode"
+						class="edit-mode"
+						style="display: none"
+					>
+						<div class="edit-header">
+							<h3>Edit Flashcards</h3>
+							<button class="secondary-btn" id="exit-fc-edit">
+								Exit Edit Mode
+							</button>
+						</div>
+
+						<div class="add-item-form">
+							<h4>Add New Flashcard</h4>
+							<div class="form-group">
+								<label for="new-fc-question">Question:</label>
+								<textarea
+									id="new-fc-question"
+									placeholder="Enter the question..."
+								></textarea>
+							</div>
+							<div class="form-group">
+								<label for="new-fc-answer">Answer:</label>
+								<textarea
+									id="new-fc-answer"
+									placeholder="Enter the answer..."
+								></textarea>
+							</div>
+							<button class="add-btn" id="add-flashcard">
+								<span>➕</span> Add Flashcard
+							</button>
+						</div>
+
+						<div class="items-list">
+							<h4>Current Flashcards</h4>
+							<div class="edit-items-container" id="flashcards-list"></div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Multiple Choice Section -->
+				<section id="multiple-choice" class="content-section">
+					<div class="section-header">
+						<div>
+							<h2>Multiple Choice</h2>
+							<p>Test your knowledge with multiple choice questions</p>
+						</div>
+						<div class="section-controls">
+							<button class="control-btn edit-btn" id="edit-mc-btn">
+								<span>✏️</span> Edit
+							</button>
+							<button class="control-btn reset-btn" id="reset-mc-btn">
+								<span>🔄</span> Reset Progress
+							</button>
+						</div>
+					</div>
+
+					<div id="mc-study-mode" class="study-mode">
+						<div class="study-header">
+							<div class="progress-indicator">
+								<span id="mc-current">1</span> / <span id="mc-total">0</span>
+							</div>
+							<div class="study-progress-bar">
+								<div class="progress-fill" id="mc-progress"></div>
+							</div>
+						</div>
+
+						<div class="question-container">
+							<div class="question-card">
+								<h3 id="mc-question">Click "Start Quiz" to begin</h3>
+								<div class="options-container" id="mc-options"></div>
+							</div>
+						</div>
+
+						<div class="study-controls">
+							<button class="primary-btn" id="start-mc">Start Quiz</button>
+							<button class="primary-btn" id="next-mc" style="display: none">
+								Next Question
+							</button>
+						</div>
+					</div>
+
+					<div id="mc-edit-mode" class="edit-mode" style="display: none">
+						<div class="edit-header">
+							<h3>Edit Multiple Choice Questions</h3>
+							<button class="secondary-btn" id="exit-mc-edit">
+								Exit Edit Mode
+							</button>
+						</div>
+
+						<div class="add-item-form">
+							<h4>Add New Question</h4>
+							<div class="form-group">
+								<label for="new-mc-question">Question:</label>
+								<textarea
+									id="new-mc-question"
+									placeholder="Enter the question..."
+								></textarea>
+							</div>
+							<div class="form-group">
+								<label for="new-mc-option1">Option A (Correct Answer):</label>
+								<input
+									type="text"
+									id="new-mc-option1"
+									placeholder="Enter correct answer..."
+								/>
+							</div>
+							<div class="form-group">
+								<label for="new-mc-option2">Option B:</label>
+								<input
+									type="text"
+									id="new-mc-option2"
+									placeholder="Enter option B..."
+								/>
+							</div>
+							<div class="form-group">
+								<label for="new-mc-option3">Option C:</label>
+								<input
+									type="text"
+									id="new-mc-option3"
+									placeholder="Enter option C..."
+								/>
+							</div>
+							<div class="form-group">
+								<label for="new-mc-option4">Option D:</label>
+								<input
+									type="text"
+									id="new-mc-option4"
+									placeholder="Enter option D..."
+								/>
+							</div>
+							<button class="add-btn" id="add-mc">
+								<span>➕</span> Add Question
+							</button>
+						</div>
+
+						<div class="items-list">
+							<h4>Current Questions</h4>
+							<div class="edit-items-container" id="mc-list"></div>
+						</div>
+					</div>
+				</section>
+
+				<!-- True/False Section -->
+				<section id="true-false" class="content-section">
+					<div class="section-header">
+						<div>
+							<h2>True/False</h2>
+							<p>Answer true or false to test your Marine Corps knowledge</p>
+						</div>
+						<div class="section-controls">
+							<button class="control-btn edit-btn" id="edit-tf-btn">
+								<span>✏️</span> Edit
+							</button>
+							<button class="control-btn reset-btn" id="reset-tf-btn">
+								<span>🔄</span> Reset Progress
+							</button>
+						</div>
+					</div>
+
+					<div id="tf-study-mode" class="study-mode">
+						<div class="study-header">
+							<div class="progress-indicator">
+								<span id="tf-current">1</span> / <span id="tf-total">0</span>
+							</div>
+							<div class="study-progress-bar">
+								<div class="progress-fill" id="tf-progress"></div>
+							</div>
+						</div>
+
+						<div class="question-container">
+							<div class="question-card">
+								<h3 id="tf-question">Click "Start Quiz" to begin</h3>
+								<div class="tf-options-container">
+									<button
+										class="tf-option-btn"
+										id="tf-true-btn"
+										style="display: none"
+									>
+										<span class="option-icon">✅</span>
+										<span class="option-text">TRUE</span>
+									</button>
+									<button
+										class="tf-option-btn"
+										id="tf-false-btn"
+										style="display: none"
+									>
+										<span class="option-icon">❌</span>
+										<span class="option-text">FALSE</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="study-controls">
+							<button class="primary-btn" id="start-tf">Start Quiz</button>
+							<button class="primary-btn" id="next-tf" style="display: none">
+								Next Question
+							</button>
+						</div>
+					</div>
+
+					<div id="tf-edit-mode" class="edit-mode" style="display: none">
+						<div class="edit-header">
+							<h3>Edit True/False Questions</h3>
+							<button class="secondary-btn" id="exit-tf-edit">
+								Exit Edit Mode
+							</button>
+						</div>
+
+						<div class="add-item-form">
+							<h4>Add New Statement</h4>
+							<div class="form-group">
+								<label for="new-tf-question">Statement:</label>
+								<textarea
+									id="new-tf-question"
+									placeholder="Enter the statement..."
+								></textarea>
+							</div>
+							<div class="form-group">
+								<label for="new-tf-answer">Answer:</label>
+								<select id="new-tf-answer">
+									<option value="true">True</option>
+									<option value="false">False</option>
+								</select>
+							</div>
+							<button class="add-btn" id="add-tf">
+								<span>➕</span> Add Statement
+							</button>
+						</div>
+
+						<div class="items-list">
+							<h4>Current Statements</h4>
+							<div class="edit-items-container" id="tf-list"></div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Ranks Section -->
+				<section id="ranks" class="content-section">
+					<div class="section-header">
+						<div>
+							<h2>Marine Corps Ranks</h2>
+							<p>Learn the rank structure of the United States Marine Corps</p>
+						</div>
+					</div>
+
+					<div class="ranks-container">
+						<div class="rank-category">
+							<h3>Enlisted Marines</h3>
+							<div class="ranks-grid" id="enlisted-ranks"></div>
+						</div>
+
+						<div class="rank-category">
+							<h3>Warrant Officers</h3>
+							<div class="ranks-grid" id="warrant-ranks"></div>
+						</div>
+
+						<div class="rank-category">
+							<h3>Commissioned Officers</h3>
+							<div class="ranks-grid" id="officer-ranks"></div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Reference Section -->
+				<section id="reference" class="content-section">
+					<div class="section-header">
+						<div>
+							<h2>Marine Corps Reference</h2>
+							<p>
+								Study essential Marine Corps knowledge - Code of Conduct,
+								General Orders, and Leadership Traits
+							</p>
+						</div>
+					</div>
+
+					<div class="reference-container">
+						<div class="reference-category">
+							<div class="reference-header">
+								<h3>Code of Conduct</h3>
+								<p>The 6 Articles every Marine must know</p>
+							</div>
+							<div class="reference-content" id="code-of-conduct"></div>
+						</div>
+
+						<div class="reference-category">
+							<div class="reference-header">
+								<h3>General Orders</h3>
+								<p>The 11 General Orders for sentries</p>
+							</div>
+							<div class="reference-content" id="general-orders"></div>
+						</div>
+
+						<div class="reference-category">
+							<div class="reference-header">
+								<h3>Leadership Traits</h3>
+								<p>The 14 traits of Marine Corps leadership</p>
+							</div>
+							<div class="reference-content" id="leadership-traits"></div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- Notification -->
+			<div id="notification" class="notification"></div>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
