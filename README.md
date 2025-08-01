@@ -54,7 +54,7 @@ You can use this app right away:
 
 ### Option 3: Just open the already hosted APP
 
-1. Copy this link `[https](https://jguzman1213.github.io/com.darknode.marinestudyguide/)`
+1. Copy this link `https://jguzman1213.github.io/com.darknode.marinestudyguide/`
 2. Paste it on your browser of preference and go
 3. Enjoy the APP & good luck Future Marine!
 
