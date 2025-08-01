@@ -99,10 +99,16 @@ Feel free to fork, modify, and share.
 ---
 
 ```markdown
-![Dashboard](./screenshots/dashboard.png)
-![Flashcards](./screenshots/flashcards.png)
-![Quiz](./screenshots/quiz.png)
-![TrueFalse](./screenshots/truefalse.png)
-![Ranks](./screenshots/ranks.png)
-![Reference](./screenshots/reference.png)
+![Dashboard](<img width="1211" height="1172" alt="dashboard" src="https://github.com/user-attachments/assets/6f679197-fd91-49bf-82a7-f79784843223" />
+)
+![Flashcards](<img width="1207" height="950" alt="flashcards" src="https://github.com/user-attachments/assets/6e58b833-e895-40b3-b900-51c8ae767b9c" />
+)
+![Quiz](<img width="1212" height="974" alt="quiz" src="https://github.com/user-attachments/assets/e22f77fc-6ff8-4e61-92fb-6c0ddb18ac89" />
+)
+![TrueFalse](<img width="1212" height="878" alt="truefalse" src="https://github.com/user-attachments/assets/1ec953bb-fd7c-4af4-9601-18b0fe328924" />
+)
+![Ranks](<img width="1208" height="931" alt="ranks" src="https://github.com/user-attachments/assets/0811e6e4-2e3b-44c4-9b26-68f2c51008c0" />
+)
+![Reference](<img width="1206" height="1015" alt="reference" src="https://github.com/user-attachments/assets/a92b9d6e-a75b-4894-8758-e8a604022c7c" />
+)
 
