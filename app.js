@@ -203,7 +203,7 @@ class MarineStudyApp {
 
 	// Navigation setup
 	setupNavigation() {
-		const navButtons = document.querySelectorAll(".nav-button");
+		const navButtons = document.querySelectorAll(".nav-card");
 		navButtons.forEach((button) => {
 			button.addEventListener("click", (e) => {
 				const section = e.currentTarget.dataset.section;
@@ -212,7 +212,7 @@ class MarineStudyApp {
 		});
 	}
 
-	// Show specific section
+	// Show specific Section
 	showSection(sectionName) {
 		// Hide all sections
 		document.querySelectorAll(".content-section").forEach((section) => {
@@ -220,7 +220,7 @@ class MarineStudyApp {
 		});
 
 		// Remove active class from nav buttons
-		document.querySelectorAll(".nav-button").forEach((button) => {
+		document.querySelectorAll(".nav-card").forEach((button) => {
 			button.classList.remove("active");
 		});
 
@@ -231,6 +231,19 @@ class MarineStudyApp {
 			.classList.add("active");
 
 		this.currentSection = sectionName;
+
+		// Auto scroll only if not dashboard
+		if (sectionName !== "dashboard") {
+			setTimeout(() => {
+				const mainContent = document.querySelector(".main-content");
+				if (mainContent) {
+					mainContent.scrollIntoView({
+						behavior: "smooth",
+						block: "start",
+					});
+				}
+			}, 150);
+		}
 
 		// Update dashboard when switching to it
 		if (sectionName === "dashboard") {
@@ -300,7 +313,7 @@ class MarineStudyApp {
 		this.showFlashcard();
 
 		document.getElementById("start-flashcards").style.display = "none";
-		document.getElementById("flip-flashcard").style.display = "inline-block";
+		document.getElementById("flip-flashcard").style.display = "inline-flex";
 	}
 
 	shuffleFlashcards() {
@@ -374,7 +387,7 @@ class MarineStudyApp {
 		this.saveData();
 
 		document.getElementById("flashcard-answer-controls").style.display = "none";
-		document.getElementById("next-flashcard").style.display = "inline-block";
+		document.getElementById("next-flashcard").style.display = "inline-flex";
 
 		this.showNotification(
 			correct ? "Correct! Well done!" : "Keep studying this one!",
@@ -388,13 +401,13 @@ class MarineStudyApp {
 			this.endFlashcardSession();
 		} else {
 			this.showFlashcard();
-			document.getElementById("flip-flashcard").style.display = "inline-block";
+			document.getElementById("flip-flashcard").style.display = "inline-flex";
 			document.getElementById("next-flashcard").style.display = "none";
 		}
 	}
 
 	endFlashcardSession() {
-		document.getElementById("start-flashcards").style.display = "inline-block";
+		document.getElementById("start-flashcards").style.display = "inline-flex";
 		document.getElementById("flip-flashcard").style.display = "none";
 		document.getElementById("next-flashcard").style.display = "none";
 		document.getElementById("flashcard-question").textContent =
@@ -608,7 +621,7 @@ class MarineStudyApp {
 			}
 		});
 
-		document.getElementById("next-mc").style.display = "inline-block";
+		document.getElementById("next-mc").style.display = "inline-flex";
 		this.showNotification(
 			correct ? "Correct!" : "Incorrect. Study this one more!",
 			correct ? "success" : "error"
@@ -626,7 +639,7 @@ class MarineStudyApp {
 	}
 
 	endMultipleChoiceSession() {
-		document.getElementById("start-mc").style.display = "inline-block";
+		document.getElementById("start-mc").style.display = "inline-flex";
 		document.getElementById("mc-question").textContent =
 			'Quiz completed! Click "Start Quiz" to try again.';
 		document.getElementById("mc-options").innerHTML = "";
@@ -869,7 +882,7 @@ class MarineStudyApp {
 			if (!correct) trueBtn.classList.add("incorrect");
 		}
 
-		document.getElementById("next-tf").style.display = "inline-block";
+		document.getElementById("next-tf").style.display = "inline-flex";
 		this.showNotification(
 			correct ? "Correct!" : "Incorrect. Remember this one!",
 			correct ? "success" : "error"
@@ -887,7 +900,7 @@ class MarineStudyApp {
 	}
 
 	endTrueFalseSession() {
-		document.getElementById("start-tf").style.display = "inline-block";
+		document.getElementById("start-tf").style.display = "inline-flex";
 		document.getElementById("tf-true-btn").style.display = "none";
 		document.getElementById("tf-false-btn").style.display = "none";
 		document.getElementById("tf-question").textContent =
@@ -1008,41 +1021,65 @@ class MarineStudyApp {
 	renderRanks() {
 		const ranks = {
 			enlisted: [
-				{ grade: "E-1", name: "Private", symbol: "🔰" },
-				{ grade: "E-2", name: "Private First Class", symbol: "🎖️" },
-				{ grade: "E-3", name: "Lance Corporal", symbol: "⚡" },
-				{ grade: "E-4", name: "Corporal", symbol: "🔱" },
-				{ grade: "E-5", name: "Sergeant", symbol: "⭐" },
-				{ grade: "E-6", name: "Staff Sergeant", symbol: "🌟" },
-				{ grade: "E-7", name: "Gunnery Sergeant", symbol: "💫" },
-				{ grade: "E-8", name: "Master Sergeant", symbol: "✨" },
-				{ grade: "E-8", name: "First Sergeant", symbol: "🎯" },
-				{ grade: "E-9", name: "Master Gunnery Sergeant", symbol: "🏆" },
-				{ grade: "E-9", name: "Sergeant Major", symbol: "👑" },
+				{ grade: "E-1", name: "Private", rimage: "placeholder.png" },
+				{
+					grade: "E-2",
+					name: "Private First Class",
+					rimage: "placeholder.png",
+				},
+				{ grade: "E-3", name: "Lance Corporal", rimage: "placeholder.png" },
+				{ grade: "E-4", name: "Corporal", rimage: "placeholder.png" },
+				{ grade: "E-5", name: "Sergeant", rimage: "placeholder.png" },
+				{ grade: "E-6", name: "Staff Sergeant", rimage: "placeholder.png" },
+				{ grade: "E-7", name: "Gunnery Sergeant", rimage: "placeholder.png" },
+				{ grade: "E-8", name: "Master Sergeant", rimage: "placeholder.png" },
+				{ grade: "E-8", name: "First Sergeant", rimage: "placeholder.png" },
+				{
+					grade: "E-9",
+					name: "Master Gunnery Sergeant",
+					rimage: "placeholder.png",
+				},
+				{ grade: "E-9", name: "Sergeant Major", rimage: "placeholder.png" },
 				{
 					grade: "E-9",
 					name: "Sergeant Major of the Marine Corps",
-					symbol: "🦅",
+					rimage: "placeholder.png",
 				},
 			],
 			warrant: [
-				{ grade: "WO-1", name: "Warrant Officer 1", symbol: "🔧" },
-				{ grade: "CWO-2", name: "Chief Warrant Officer 2", symbol: "⚙️" },
-				{ grade: "CWO-3", name: "Chief Warrant Officer 3", symbol: "🔩" },
-				{ grade: "CWO-4", name: "Chief Warrant Officer 4", symbol: "⚡" },
-				{ grade: "CWO-5", name: "Chief Warrant Officer 5", symbol: "🛠️" },
+				{ grade: "WO-1", name: "Warrant Officer 1", rimage: "placeholder.png" },
+				{
+					grade: "CWO-2",
+					name: "Chief Warrant Officer 2",
+					rimage: "placeholder.png",
+				},
+				{
+					grade: "CWO-3",
+					name: "Chief Warrant Officer 3",
+					rimage: "placeholder.png",
+				},
+				{
+					grade: "CWO-4",
+					name: "Chief Warrant Officer 4",
+					rimage: "placeholder.png",
+				},
+				{
+					grade: "CWO-5",
+					name: "Chief Warrant Officer 5",
+					rimage: "placeholder.png",
+				},
 			],
 			officer: [
-				{ grade: "O-1", name: "Second Lieutenant", symbol: "🥉" },
-				{ grade: "O-2", name: "First Lieutenant", symbol: "🥈" },
-				{ grade: "O-3", name: "Captain", symbol: "🥇" },
-				{ grade: "O-4", name: "Major", symbol: "🏅" },
-				{ grade: "O-5", name: "Lieutenant Colonel", symbol: "🎖️" },
-				{ grade: "O-6", name: "Colonel", symbol: "🏆" },
-				{ grade: "O-7", name: "Brigadier General", symbol: "⭐" },
-				{ grade: "O-8", name: "Major General", symbol: "🌟" },
-				{ grade: "O-9", name: "Lieutenant General", symbol: "💫" },
-				{ grade: "O-10", name: "General", symbol: "🦅" },
+				{ grade: "O-1", name: "Second Lieutenant", rimage: "placeholder.png" },
+				{ grade: "O-2", name: "First Lieutenant", rimage: "placeholder.png" },
+				{ grade: "O-3", name: "Captain", rimage: "placeholder.png" },
+				{ grade: "O-4", name: "Major", rimage: "placeholder.png" },
+				{ grade: "O-5", name: "Lieutenant Colonel", rimage: "placeholder.png" },
+				{ grade: "O-6", name: "Colonel", rimage: "placeholder.png" },
+				{ grade: "O-7", name: "Brigadier General", rimage: "placeholder.png" },
+				{ grade: "O-8", name: "Major General", rimage: "placeholder.png" },
+				{ grade: "O-9", name: "Lieutenant General", rimage: "placeholder.png" },
+				{ grade: "O-10", name: "General", rimage: "placeholder.png" },
 			],
 		};
 
@@ -1054,7 +1091,9 @@ class MarineStudyApp {
 				const div = document.createElement("div");
 				div.className = "rank-card";
 				div.innerHTML = `
-                    <div class="rank-insignia">${rank.symbol}</div>
+                    <div class="rank-insignia">
+                        <img src="${rank.rimage}" alt="${rank.name} insignia" />
+                    </div>
                     <div class="rank-name">${rank.name}</div>
                     <div class="rank-grade">${rank.grade}</div>
                 `;
