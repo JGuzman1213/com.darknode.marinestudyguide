@@ -98,11 +98,11 @@ Feel free to fork, modify, and share.
 
 ---
 
-
+![Dashboard]
 <img width="1211" height="1172" alt="dashboard" src="https://github.com/user-attachments/assets/6f679197-fd91-49bf-82a7-f79784843223" />
 
-![Flashcards](<img width="1207" height="950" alt="flashcards" src="https://github.com/user-attachments/assets/6e58b833-e895-40b3-b900-51c8ae767b9c" />
-)
+![Flashcards]<img width="1207" height="950" alt="flashcards" src="https://github.com/user-attachments/assets/6e58b833-e895-40b3-b900-51c8ae767b9c" />
+
 ![Quiz](<img width="1212" height="974" alt="quiz" src="https://github.com/user-attachments/assets/e22f77fc-6ff8-4e61-92fb-6c0ddb18ac89" />
 )
 ![TrueFalse](<img width="1212" height="878" alt="truefalse" src="https://github.com/user-attachments/assets/1ec953bb-fd7c-4af4-9601-18b0fe328924" />
