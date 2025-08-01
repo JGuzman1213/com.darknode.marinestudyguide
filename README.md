@@ -93,7 +93,7 @@ Feel free to fork, modify, and share.
 
 ## 👤 Author
 
-**Created by:** [DarkNode](https://github.com/JGuzman1213)  
+**Created by:** [JGuzman1213](https://github.com/JGuzman1213)  
 📧 Contact: *NONE*
 
 ---
