@@ -67,6 +67,7 @@ You can use this app right away:
 ├── styles.css       # Custom styles (responsive, themed)
 ├── app.js           # JavaScript logic and state management
 ├── README.md        # This file
+├── LICENCE.txt      # LICENCE (MIT)
 ```
 
 ---
