@@ -98,7 +98,7 @@ Feel free to fork, modify, and share.
 
 ---
 
-![Dashboard]
+[Dashboard]
 <img width="1211" height="1172" alt="dashboard" src="https://github.com/user-attachments/assets/6f679197-fd91-49bf-82a7-f79784843223" />
 
 ![Flashcards]<img width="1207" height="950" alt="flashcards" src="https://github.com/user-attachments/assets/6e58b833-e895-40b3-b900-51c8ae767b9c" />
