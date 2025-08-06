@@ -45,6 +45,13 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 .app-container {
 	min-height: 100vh;
 	display: flex;
@@ -104,11 +111,22 @@ body {
 	font-weight: 600;
 }
 
-.motto {
+.mottocopy {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.motto,
+.copyright {
 	font-size: 0.875rem;
 	opacity: 0.9;
 	font-weight: 400;
 	margin: 0;
+}
+
+.copyright {
+	margin-left: auto;
 }
 
 /* Mobile Navigation */
@@ -163,7 +181,7 @@ body {
 
 /* Main Content */
 .main-content {
-	flex: 1;
+	flex: 1 0 auto;
 	padding: 1.5rem;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -1127,4 +1145,128 @@ select:focus {
 
 .loading {
 	animation: pulse 1.5s ease-in-out infinite;
+}
+/**************************************************************************/
+/*Mobile Burguer Style*/
+.mobile-menu-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.75rem;
+	margin-top: 1rem;
+}
+
+/* Burger Button */
+#menu-toggle-btn {
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.15);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 12px;
+	color: white;
+	cursor: pointer;
+	font-size: 1.25rem;
+	transition: all 0.2s ease;
+	backdrop-filter: blur(4px);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#menu-toggle-btn:hover {
+	background: rgba(255, 255, 255, 0.25);
+	transform: scale(1.05);
+}
+
+#menu-toggle-btn:active {
+	transform: scale(0.95);
+}
+
+#active-section-name {
+	color: white;
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+/* Hide menu by default on mobile */
+#mobile-menu {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+#mobile-menu.open {
+	max-height: 1000px; /* plenty of space for nav */
+	padding-bottom: 1rem;
+}
+
+/* Optional: hide nav-grid on desktop */
+@media (min-width: 768px) {
+	.mobile-menu-toggle {
+		display: none;
+	}
+
+	#mobile-menu {
+		display: block;
+		max-height: fit-content;
+	}
+}
+/************************************************************************/
+
+.docs-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding: 1rem 0;
+}
+
+.doc-item {
+	background: var(--surface);
+	border-radius: var(--radius-lg);
+	padding: 1.5rem;
+	box-shadow: var(--shadow-sm);
+	border: 1px solid var(--border);
+}
+
+.doc-item h3 {
+	font-size: 1.125rem;
+	color: var(--text-primary);
+	margin-bottom: 0.5rem;
+}
+
+.doc-item p {
+	color: var(--text-secondary);
+	margin-bottom: 1rem;
+	font-size: 0.875rem;
+}
+
+.download-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.75rem 1.25rem;
+	background: var(--marine-gold);
+	color: var(--marine-blue);
+	font-weight: 600;
+	text-decoration: none;
+	border-radius: var(--radius);
+	transition: all 0.2s ease;
+	border: none;
+}
+
+.download-btn:hover {
+	background: var(--marine-gold-dark);
+	transform: translateY(-2px);
+}
+
+.app-footer {
+	flex-shrink: 0; /* prevent footer from shrinking */
+	text-align: center;
+	padding: 1rem 0;
+	background-color: #ebebeb; /* or your app’s footer bg color */
+	color: #555555;
+	font-size: 0.9rem;
+	font-weight: 500;
+	border-top: 1px solid #ffffff00;
 }
