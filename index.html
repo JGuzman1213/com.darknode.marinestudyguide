@@ -30,6 +30,10 @@
 		<link rel="manifest" href="./favicon/site.webmanifest" />
 		<link rel="stylesheet" href="styles.css" />
 		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
@@ -48,39 +52,53 @@
 							<span id="overall-progress">0%</span>
 						</div>
 					</div>
-					<p class="motto">Semper Fidelis</p>
+					<div class="mottocopy">
+						<p class="motto">Semper Fidelis</p>
+						<p class="copyright">RSS San Juan &copy; <span id="year"></span></p>
+					</div>
+
+					<div class="mobile-menu-toggle">
+						<button id="menu-toggle-btn">☰</button>
+						<span id="active-section-name">Dashboard</span>
+					</div>
 				</div>
 			</header>
 
 			<!-- Mobile Navigation -->
-			<nav class="mobile-navigation">
-				<div class="nav-grid">
-					<button class="nav-card active" data-section="dashboard">
-						<div class="nav-icon">📊</div>
-						<span>Dashboard</span>
-					</button>
-					<button class="nav-card" data-section="flashcards">
-						<div class="nav-icon">🃏</div>
-						<span>Flashcards</span>
-					</button>
-					<button class="nav-card" data-section="multiple-choice">
-						<div class="nav-icon">✅</div>
-						<span>Quiz</span>
-					</button>
-					<button class="nav-card" data-section="true-false">
-						<div class="nav-icon">❓</div>
-						<span>True/False</span>
-					</button>
-					<button class="nav-card" data-section="ranks">
-						<div class="nav-icon">🎖️</div>
-						<span>Ranks</span>
-					</button>
-					<button class="nav-card" data-section="reference">
-						<div class="nav-icon">📖</div>
-						<span>Reference</span>
-					</button>
-				</div>
-			</nav>
+			<div id="mobile-menu" class="mobile-menu">
+				<nav class="mobile-navigation">
+					<div class="nav-grid">
+						<button class="nav-card active" data-section="dashboard">
+							<div class="nav-icon">📊</div>
+							<span>Dashboard</span>
+						</button>
+						<button class="nav-card" data-section="flashcards">
+							<div class="nav-icon">🃏</div>
+							<span>Flashcards</span>
+						</button>
+						<button class="nav-card" data-section="multiple-choice">
+							<div class="nav-icon">✅</div>
+							<span>Quiz</span>
+						</button>
+						<button class="nav-card" data-section="true-false">
+							<div class="nav-icon">❓</div>
+							<span>True/False</span>
+						</button>
+						<button class="nav-card" data-section="ranks">
+							<div class="nav-icon">🎖️</div>
+							<span>Ranks</span>
+						</button>
+						<button class="nav-card" data-section="reference">
+							<div class="nav-icon">📖</div>
+							<span>Reference</span>
+						</button>
+						<button class="nav-card" data-section="knowledge-docs">
+							<div class="nav-icon">📄</div>
+							<span>Knowledge Docs</span>
+						</button>
+					</div>
+				</nav>
+			</div>
 
 			<main class="main-content">
 				<!-- Dashboard Section -->
@@ -495,12 +513,88 @@
 						</div>
 					</div>
 				</section>
+
+				<!-- Knowledge Docs Section -->
+				<section id="knowledge-docs" class="content-section">
+					<div class="section-header">
+						<h2>Knowledge Docs</h2>
+						<p>Download PDFs to study offline</p>
+					</div>
+
+					<div class="docs-container">
+						<div class="doc-item">
+							<h3>Marine Corps History</h3>
+							<p>
+								A detailed guide on the origins and key moments of the Marine
+								Corps.
+							</p>
+							<a
+								href="./docs/marine-history.pdf"
+								download
+								class="download-btn"
+								aria-label="Download Marine Corps History PDF"
+							>
+								<i class="fa-solid fa-file-arrow-down"></i> Download
+							</a>
+						</div>
+
+						<div class="doc-item">
+							<h3>Ranks</h3>
+							<p>All the ranks in the Marine Corps.</p>
+							<a
+								href="./docs/ranks.pdf"
+								download
+								class="download-btn"
+								aria-label="Download Marine Corps Ranks PDF"
+								><i class="fa-solid fa-file-arrow-down"></i> Download</a
+							>
+						</div>
+
+						<div class="doc-item">
+							<h3>Leadership Traits</h3>
+							<p>A printable summary of the 14 leadership traits.</p>
+							<a
+								href="./docs/leadership-traits.pdf"
+								download
+								class="download-btn"
+								><i class="fa-solid fa-file-arrow-down"></i> Download</a
+							>
+						</div>
+
+						<div class="doc-item">
+							<h3>General Orders & Code Of Conduct</h3>
+							<p>All 11 General Orders formatted for easy reading.</p>
+							<a
+								href="./docs/general-orders-code-conduct.pdf"
+								download
+								class="download-btn"
+								><i class="fa-solid fa-file-arrow-down"></i> Download</a
+							>
+						</div>
+					</div>
+				</section>
 			</main>
 
 			<!-- Notification -->
 			<div id="notification" class="notification"></div>
 		</div>
 
+		<footer class="app-footer">
+			<p>
+				Looking to make a change? Find your nearest recruiter and begin the
+				process. Trust the journey ahead.
+			</p>
+		</footer>
+
 		<script src="app.js"></script>
+		<script>
+			// Set current year in copyright
+			document.addEventListener("DOMContentLoaded", () => {
+				const yearSpan = document.getElementById("year");
+				if (yearSpan) {
+					yearSpan.textContent = new Date().getFullYear();
+				}
+			});
+		</script>
 	</body>
 </html>
