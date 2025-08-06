@@ -31,7 +31,7 @@ class MarineStudyApp {
 				},
 				{
 					id: 3,
-					question: "Who is the most decorated Marine?",
+					question: "Who is the most decorated Marine in history?",
 					answer: "Lieutenant General Lewis 'Chesty' Puller",
 					correctCount: 0,
 					totalCount: 0,
@@ -39,15 +39,62 @@ class MarineStudyApp {
 				},
 				{
 					id: 4,
-					question: "What does EGA stand for?",
-					answer:
-						"Eagle, Globe, and Anchor - the Marine Corps emblem representing the Corps' commitment to defend the nation on land, sea, and air",
+					question: "What does EGA stand for in the Marine Corps?",
+					answer: "Eagle, Globe, and Anchor",
 					correctCount: 0,
 					totalCount: 0,
 					weight: 1,
 				},
 				{
 					id: 5,
+					question: "What does the eagle in the EGA represent?",
+					answer: "The United States and its proud defense by the Marine Corps",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 6,
+					question: "What does the globe in the EGA represent?",
+					answer: "Worldwide service and presence",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 7,
+					question: "What does the anchor in the EGA represent?",
+					answer: "Naval tradition and ties to the U.S. Navy",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 8,
+					question: "What is the Marine Corps motto?",
+					answer: "Semper Fidelis – Always Faithful",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 9,
+					question: "What are the Marine Corps core values?",
+					answer: "Honor, Courage, Commitment",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 10,
+					question: "What is the significance of the blood stripe?",
+					answer: "Honors Marines killed at the Battle of Chapultepec in 1847",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 11,
 					question: "Who was the first female Marine?",
 					answer: "Opha May Johnson, enlisted on August 13, 1918",
 					correctCount: 0,
@@ -55,8 +102,8 @@ class MarineStudyApp {
 					weight: 1,
 				},
 				{
-					id: 6,
-					question: "When and where was the Marine Corps born?",
+					id: 12,
+					question: "When and where was the Marine Corps founded?",
 					answer:
 						"November 10, 1775, at Tun Tavern in Philadelphia, Pennsylvania",
 					correctCount: 0,
@@ -64,10 +111,226 @@ class MarineStudyApp {
 					weight: 1,
 				},
 				{
-					id: 7,
+					id: 13,
+					question: "What rifle do Marines typically train with?",
+					answer: "M16A4 or M4",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 14,
 					question: "List all 14 Marine Corps Leadership Traits",
 					answer:
 						"Justice, Judgement, Dependability, Integrity, Decisiveness, Tact, Initiative, Endurance, Bearing, Unselfishness, Courage, Knowledge, Loyalty, Enthusiasm",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 15,
+					question: "What are the 11 General Orders?",
+					answer: "Standard responsibilities for Marine sentries while on duty",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 16,
+					question: "What is the first General Order?",
+					answer:
+						"To take charge of this post and all government property in view.",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 17,
+					question: "What is the Marines’ Hymn?",
+					answer: "'From the Halls of Montezuma to the Shores of Tripoli'",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 18,
+					question: "What is the Marine Corps’ primary mission?",
+					answer: "Amphibious assault and rapid deployment",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 19,
+					question: "What are the ranks from E-1 to E-9?",
+					answer:
+						"Private, PFC, Lance Corporal, Corporal, Sergeant, Staff Sergeant, Gunnery Sergeant, Master Sergeant/First Sergeant, Master Gunnery Sergeant/Sergeant Major",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 20,
+					question: "What is MCMAP?",
+					answer: "Marine Corps Martial Arts Program",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 21,
+					question: "What is the Rifleman’s Creed?",
+					answer:
+						"A statement emphasizing a Marine's relationship with their rifle",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 22,
+					question: "What is the Uniform Code of Military Justice (UCMJ)?",
+					answer: "Legal foundation for military law",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 23,
+					question: "What is Non-Judicial Punishment (NJP)?",
+					answer: "Disciplinary action administered by a commander",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 24,
+					question: "Who is the Commandant of the Marine Corps?",
+					answer: "The senior officer of the U.S. Marine Corps",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 25,
+					question: "What are the three phases of Marine Corps bootcamp?",
+					answer: "Receiving, Training, and Graduation",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 26,
+					question: "What is the Crucible?",
+					answer:
+						"A 54-hour field event that tests recruits' physical and mental endurance",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 27,
+					question: "What is the meaning of 'Ooh-rah'?",
+					answer: "A motivational cry used by Marines",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 28,
+					question: "What is a firewatch?",
+					answer: "A duty where a Marine stands watch for safety and order",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 29,
+					question: "What does the term 'Jarhead' refer to?",
+					answer:
+						"A slang term for a Marine, referencing the high-and-tight haircut",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 30,
+					question: "What is the role of a drill instructor?",
+					answer: "To train and discipline recruits in bootcamp",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 31,
+					question: "What is a 'Liberty Card'?",
+					answer: "A pass granting permission for time off or leave",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 32,
+					question: "What is the maximum score on the Marine Corps PFT?",
+					answer: "300",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 33,
+					question: "What does 'PT' stand for?",
+					answer: "Physical Training",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 34,
+					question: "What are the three events of the PFT?",
+					answer: "Pull-ups or push-ups, crunches or plank, and a 3-mile run",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 35,
+					question: "What is the Delayed Entry Program (DEP)?",
+					answer:
+						"A program that prepares future Marines before shipping to bootcamp",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 36,
+					question:
+						"What is the nickname for Marine Corps Recruit Depot San Diego?",
+					answer: "Hollywood",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 37,
+					question:
+						"What is the nickname for Marine Corps Recruit Depot Parris Island?",
+					answer: "The Island",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 38,
+					question: "What is the name of the sword carried by Marine NCOs?",
+					answer: "NCO Sword",
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 39,
+					question: "What is the name of the Marine Corps dress uniform?",
+					answer: "Dress Blues",
 					correctCount: 0,
 					totalCount: 0,
 					weight: 1,
@@ -134,6 +397,180 @@ class MarineStudyApp {
 					totalCount: 0,
 					weight: 1,
 				},
+				{
+					id: 6,
+					question: "What are the three components of the Marine Corps emblem?",
+					options: [
+						"Eagle, Shield, Anchor",
+						"Eagle, Globe, Anchor",
+						"Flag, Globe, Sword",
+						"Star, Anchor, Rifle",
+					],
+					correctAnswer: 1,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 7,
+					question: "What is the Marine Corps motto?",
+					options: [
+						"Semper Paratus",
+						"Semper Fi",
+						"Semper Fidelis",
+						"Semper Honor",
+					],
+					correctAnswer: 2,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 8,
+					question: "What is the purpose of the Crucible?",
+					options: [
+						"Weapons training",
+						"Final test of endurance",
+						"Graduation ceremony",
+						"Fitness evaluation",
+					],
+					correctAnswer: 1,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 9,
+					question: "Which Marine earned five Navy Crosses?",
+					options: [
+						"Chesty Puller",
+						"Smedley Butler",
+						"Dan Daly",
+						"John Basilone",
+					],
+					correctAnswer: 0,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 10,
+					question: "How long is Marine bootcamp?",
+					options: ["10 weeks", "12 weeks", "13 weeks", "14 weeks"],
+					correctAnswer: 2,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 11,
+					question:
+						"Which core value means doing what’s right even when no one is looking?",
+					options: ["Courage", "Honor", "Loyalty", "Discipline"],
+					correctAnswer: 1,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 12,
+					question: "What is the Marine Corps birthday?",
+					options: [
+						"June 14, 1775",
+						"July 4, 1776",
+						"November 10, 1775",
+						"December 7, 1941",
+					],
+					correctAnswer: 2,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 13,
+					question:
+						"Which weapon is used for Marine marksmanship qualification?",
+					options: ["M9", "M16/M4", "M249", "M240B"],
+					correctAnswer: 1,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 14,
+					question: "What are the phases of bootcamp?",
+					options: [
+						"Prep, Training, Battle",
+						"Beginner, Intermediate, Expert",
+						"Receiving, Training, Graduation",
+						"Arrival, Combat, Evaluation",
+					],
+					correctAnswer: 2,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 15,
+					question: "What is MCMAP?",
+					options: [
+						"Marine Combat Manual",
+						"Marine Core Mechanics",
+						"Martial Arts Program",
+						"Marksmanship Course",
+					],
+					correctAnswer: 2,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 16,
+					question:
+						"Who is known for saying 'Come on, you sons of b****es, do you want to live forever?'?",
+					options: [
+						"Dan Daly",
+						"Chesty Puller",
+						"John Basilone",
+						"Smedley Butler",
+					],
+					correctAnswer: 0,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 17,
+					question: "What is the highest enlisted rank in the Marine Corps?",
+					options: [
+						"Gunnery Sergeant",
+						"First Sergeant",
+						"Sergeant Major of the Marine Corps",
+						"Master Gunnery Sergeant",
+					],
+					correctAnswer: 2,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 18,
+					question: "What color is the blood stripe?",
+					options: ["Black", "Blue", "Gold", "Red"],
+					correctAnswer: 3,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 19,
+					question: "Which uniform is worn during formal ceremonies?",
+					options: ["Cammies", "Service Alphas", "Dress Blues", "PT gear"],
+					correctAnswer: 2,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
 			],
 			trueFalse: [
 				{
@@ -176,6 +613,119 @@ class MarineStudyApp {
 					totalCount: 0,
 					weight: 1,
 				},
+				{
+					id: 6,
+					question: "The eagle in the EGA represents the United States.",
+					answer: true,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 7,
+					question: "The Marine Corps is part of the Department of the Army.",
+					answer: false,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 8,
+					question: "Semper Fidelis means 'Always Faithful'.",
+					answer: true,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 9,
+					question: "The globe in the EGA stands for land dominance.",
+					answer: false,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 10,
+					question: "The anchor represents the Navy heritage of the Corps.",
+					answer: true,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 11,
+					question: "Chesty Puller was awarded five Navy Crosses.",
+					answer: true,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 12,
+					question: "The blood stripe honors Marines killed at Iwo Jima.",
+					answer: false,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 13,
+					question: "The first General Order is to take charge of this post.",
+					answer: true,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 14,
+					question: "The Crucible is 72 hours long.",
+					answer: false,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 15,
+					question: "Bootcamp is 13 weeks long.",
+					answer: true,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 16,
+					question: "The M16A4/M4 is commonly used for marksmanship.",
+					answer: true,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 17,
+					question: "PT stands for Physical Training.",
+					answer: true,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 18,
+					question: "There are 14 Marine Corps Leadership Traits.",
+					answer: true,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
+				{
+					id: 19,
+					question:
+						"The Marines' Hymn is the oldest official song in the U.S. military.",
+					answer: true,
+					correctCount: 0,
+					totalCount: 0,
+					weight: 1,
+				},
 			],
 		};
 
@@ -199,6 +749,15 @@ class MarineStudyApp {
 		this.setupReference();
 		this.updateDashboard();
 		this.showSection("dashboard");
+		const menuToggleBtn = document.getElementById("menu-toggle-btn");
+		const mobileMenu = document.getElementById("mobile-menu");
+
+		menuToggleBtn.addEventListener("click", () => {
+			mobileMenu.classList.toggle("open");
+			menuToggleBtn.textContent = mobileMenu.classList.contains("open")
+				? "✖"
+				: "☰";
+		});
 	}
 
 	// Navigation setup
@@ -214,6 +773,27 @@ class MarineStudyApp {
 
 	// Show specific Section
 	showSection(sectionName) {
+		// Update active section name beside the menu burger
+		const nameMap = {
+			dashboard: "Dashboard",
+			flashcards: "Flashcards",
+			"multiple-choice": "Quiz",
+			"true-false": "True/False",
+			ranks: "Ranks",
+			reference: "Reference",
+			"knowledge-docs": "Knowledge Docs",
+		};
+
+		const sectionLabel = nameMap[sectionName] || sectionName;
+		document.getElementById("active-section-name").textContent = sectionLabel;
+
+		// Close mobile menu on section select (mobile UX)
+		// 🧠 Fix: reset burger icon when section is clicked
+		const mobileMenu = document.getElementById("mobile-menu");
+		const menuToggleBtn = document.getElementById("menu-toggle-btn");
+		mobileMenu.classList.remove("open");
+		menuToggleBtn.textContent = "☰";
+
 		// Hide all sections
 		document.querySelectorAll(".content-section").forEach((section) => {
 			section.classList.remove("active");
@@ -242,7 +822,7 @@ class MarineStudyApp {
 						block: "start",
 					});
 				}
-			}, 150);
+			}, 350);
 		}
 
 		// Update dashboard when switching to it
