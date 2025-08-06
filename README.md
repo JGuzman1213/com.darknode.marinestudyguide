@@ -74,15 +74,14 @@ You can use this app right away:
 
 ## ⚠️ Disclaimer
 
-> This project is **not affiliated with, endorsed by, or sponsored by the United States Marine Corps**, the U.S. Department of Defense, or any official organization.
+> This project is **not officially affiliated with, endorsed by, or sponsored by the United States Marine Corps**, the U.S. Department of Defense, or any other official entity.
+> However, I have received **permission** from a Marine Corps Recruiter to develop this app as a resource for prospective Marines to practice and enhance their knowledge.
 
 This app is created **solely for educational and self-study purposes**.  
 Its content is user-editable and stored locally on your device.  
 Any resemblance to official study material is coincidental.
 
 Please do not use this app for official testing, certifications, or operational purposes.
-
-> **I have also obtained the Recruiter's permission to develop this app for prospective Marines to practice and enhance their knowledge.**
 
 ---
 
