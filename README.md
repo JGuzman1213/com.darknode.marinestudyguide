@@ -82,6 +82,8 @@ Any resemblance to official study material is coincidental.
 
 Please do not use this app for official testing, certifications, or operational purposes.
 
+> **I have also obtained the Recruiter's permission to develop this app for prospective Marines to practice and enhance their knowledge.**
+
 ---
 
 ## 📖 License
